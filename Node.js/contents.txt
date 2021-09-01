@@ -1,0 +1,73 @@
+Node.js is javascript runtime built on chrome's V8 javascript engine.
+
+Node.js is a javascript running on the server.
+
+When to use Node.js?
+1) I/O Bound
+2) Data Streaming Applications
+3) Real-time chat Applications
+
+We can't use node.js in CPU intensive Applications.
+
+------------------------- REPL ----------------------
+
+REPL in Node.js - this feature is very useful in experimenting with Node.js codes and to debug js codes.
+
+a) Read - reads user's input, parses the input into javascript data structure, and stores in memory.
+b) Eval - takes and evaluates the data structure.
+c) Print - prints the result.
+d) Loop - loops the above command until the user presses ctrl-c twice.
+
+------------------------- Node.js CORE MODULE ----------------------
+
+Node.js Core Module - 
+=> Modules are considered to be same as js libraries. a set of functions we want to include in our application.
+File system
+
+*Buffer Data - Node.js includes an additional data type called Buffer.
+It is mainly used to store binary data, while reading from a file or recieving packets over the internet.
+
+* While reading, we can use utf-8 to encode the binary format into charaters.
+
+------------------------- Node.js OS Module -------------------------
+
+The os module provides operating system-related utility methods and properties. It can be accessed using:
+const os = require('os');
+
+------------------------- Node.js Path Module -------------------------
+
+The path module provides utilities for working with file and directory paths. It can be accessed using:
+const path = require('path');
+
+------------------------- Node.js Web Server --------------------------
+
+The web server is present to access the web pages of any web application. The web server handles the http request for the web app.
+Node.js provides capabilities to create our own server which will handle HTTP request asynchronously.
+
+------------------------- JSON in Node.js -----------------------------
+
+1. Convert an object into JSON type data - stringify()
+2. Convert JSON data into an object or a string - parse()
+
+------------------------- API's -----------------------------
+
+API - Application Programming Interface, a software which is intermediary that allows two applications to talk to each other.
+eg. - weather app, messaging app.
+
+------------------------- Node.js Events Module -------------------------
+
+Node.js has a built-in module called 'Events', where we can create-, fire- , listen for- our own events.
+
+Syntax - 
+
+const EventEmitter = require('events');
+const event = new EventEmitter();
+
+------------------------- Node.js Streams and Buffer -------------------------
+
+Streams are objects that let you read data from a sourceor write data to a destination in continous fashion.
+In node.js, there are 4 types of streams - 
+1) Readable - Stream which is used for read operation.
+2) Writable - Stream which is used for write operation.
+3) Duplex - Stream which can be used for both read and write operation.
+4) Transform - A type of duplex stream where the output is computed based on input.

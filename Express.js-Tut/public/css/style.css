@@ -1,0 +1,13 @@
+h1{
+    color: brown;
+    font-size: 3rem;
+}
+p{
+    color: chocolate;
+    font-size: 2rem;
+}
+
+ul li{
+    list-style: none;
+    line-height: 1.5rem;
+}

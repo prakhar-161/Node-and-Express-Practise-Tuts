@@ -1,0 +1,54 @@
+--------------------- Express.js ----------------------
+
+It is a Node.js framework.
+It is basically a web application framework that provides us with a simple API to build websites, web apps and back ends.
+
+const express = require('express');
+const app = express();
+
+--------------------- HTTP Methods and Requests --------------------
+CRUD Operation
+
+1) GET - read data from server
+2) POST - create a new data on server
+3) UPDATE - update data
+4) DELETE - delete data
+
+app.get( route , callback(req,res) => {} );
+-> '/' represents home/main page of website.
+
+--------------------- Static Files ----------------------
+
+Serving static files in Express
+-> To serve static files such as image, CSS files and JS files, use the 'express.static' built-in middleware function in Express.
+Syntax - 
+express.static(root,[options])
+
+--------------------- Template/View Engines ----------------------
+
+A template engine enables you to use static template files in your application. 
+At runtime, the template engine replaces variables in a template file with actual values, and transforms the template into an HTML file sent to the client. This approach makes it easier to design an HTML page.
+
+Some popular template engines that work with Express are Pug, Mustache, and EJS.
+
+Syntax:- 
+app.set('view engine','hbs');
+app.set('views','./views');
+*Use res.render in get request now.
+
+--------------------- Partials(hbs) ----------------------
+
+Partials are basically just views that are designed to be used from within other views. 
+They are particularly useful for reusing the same markup between different views, layouts, and even other partials.
+
+-> We have to import a module named 'hbs'.
+Then,
+hbs.registerPartials(path)
+
+*To include handlebars partial file into the views file, the syntax is - {{>partial_file_name}}
+
+--------------------- Query Strings(URL Parameters) ----------------------
+
+URL Parameters are pieces of information located in the query string of a URL. 
+The query string is the portion of the URL that follows a question mark.
+
